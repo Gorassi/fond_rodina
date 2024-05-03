@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page_news{
+    display:flex;
+}
+.menu{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20%;
+    background-color: #1A4e11;
+}
+.text_menu{
+    /* border: 1px dotted red; */
+    margin: 20%;
+    margin-bottom: 10%;
+}
+
+.references > a{
+    margin-left: 10%;
+    text-decoration: none;
+    color:#A2F66F;
+    font-size: 24px;
+    font-style: italic;
+    font-family: Inter;    
+}
+
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: white;
+}
+#button_1{
+    width: 70%;
+    height: 10%;
+    border: 3px solid #A2F66F;
+    border-radius: 20px;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #A2F66F;
+    /* color: #1A4e11; */
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: 3px 3px 3px black;
+    box-shadow: 10px 10px 5px black;
+    text-align: center;
+   
+}
+#button_1:hover{
+    background-color: #e5f052;
+    /* text-shadow: 10px 10px 5px red; */
+    
+}
+#button_1:active{
+    background-color: white;
+    box-shadow: none;
+    border: 3px solid #1A4e11;
+    box-shadow: 10px 10px 5px #1A4e11;
+}
+#button_text{
+    margin-top: 5px;
+}
+#copy_right{    
+    opacity: 25%;
+    -webkit-text-stroke: none;
+    /* text-shadow: 8px 8x 20px #091807;    */
+    text-shadow: none;
+    color: #A2F66F;
+}
+
+.content{
+    height: 2900px;
+    width: 80%;
+    background-color: #A2F66F;
+}
+.allnews{
+    margin: 3% 5% auto 5%;
+    /* border: 1px dotted green; */
+    font-style: italic;
+}
+.containers{   
+    font-style: italic;
+    
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* height: 30%; */
+    /* border: 1px dotted red; */
+    /* margin-bottom: 3%; */
+    /* padding-bottom: 2%; */
+    gap:40px;
+}
+.header{
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 2%;
+}
+
+.img{
+    background-size: cover;
+    /* border: 1px solid blue; */
+    width: 70%;       
+}
+.photosign{
+    font-size: 15px;
+}
+.news{
+    /* border: 1px solid green; */
+    width: 100%;
+    font-size: 21px;
+}
+.text{
+    text-indent: 25px;
+    line-height: 1.2;
+}
+.detail{
+    /* text-decoration: none; */
+    color: blue;
+}
+.detail:hover{
+    color: blueviolet;
+}
+.source{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    font-size: 18px;
+   
+}
+#photo{
+    max-width: 100%;
+    height: auto;
+}

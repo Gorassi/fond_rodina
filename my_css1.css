@@ -1,0 +1,134 @@
+@font-face{
+    font-family: 'My_Kaisei_Tokumin';
+    src: url(/Users/ион/Desktop/DOM/Rodina/font/KaiseiTokumin-ExtraBold.ttf);
+}
+
+@font-face{
+    font-family: 'My_Miami';
+    src: url(/Users/ион/Desktop/DOM/Rodina/font/Miami.ttf)
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(IMG/field_12.jpg) no-repeat top center fixed;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.container{    
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* border: 1px dotted blue;
+    margin: 5px; */
+    height: 100vh;
+    max-width: 1240px;
+}
+div{
+    margin: auto;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+.rodina{
+    width: 64vw;
+    font-size: 50px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    
+    color: #C8E9EE;    
+    text-shadow: blue 2px 2px 4px;
+    text-align: right;
+    /* background-color: #A2F66F; */
+    opacity: 0.6;
+}
+h2{
+    width:80vw;
+    color: rgb(227, 238, 75);    
+    font-size: 85px;
+    line-height: 1.4em;
+    /* font-family: 'Miami'; */
+    font-style: italic;
+    font-weight: 700;
+    -webkit-text-stroke: 1px  #061205;
+    /* text-shadow: 8px 8x 20px #091807;    */
+    text-shadow: 2px 2px 5px black; 
+    
+    /* background-color: aquamarine;   */
+    opacity: 0.9;
+} 
+.enter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: end; */
+width: 7vw;
+/* background-color: #A2F66F; */
+opacity: 0.9;
+height: 5vh;
+}
+h3{
+color: rgb(227, 238, 75);
+/* height: 300px; */
+transform: scale(1, 0.3);
+
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110px;    
+    font-weight: 600;
+    animation-name: my_animation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes my_animation {
+    from{
+        margin-top: -80px;
+    }
+    15%{
+        margin-top: -60px;        
+    }
+    50%{
+        margin-top: -80px;
+    }
+    100%{
+        margin-top: -80px;
+    }    
+}
+@media only screen and (max-width: 1024px){
+    h2{
+        font-size: 75px;
+    }
+    .rodina{
+        color:red;
+    }
+    }
+@media only screen and (max-width: 816px) {
+    .rodina{
+        color: blue;
+        font-size: 40px;
+        text-align: center;
+    }   
+}
+@media only screen and (max-width: 612px){
+    .rodina{
+        color: yellow;
+        font-size: 30px;
+        text-align: center;
+    }
+    h2{
+        font-size: 45px;
+        width: 50vw;
+    }
+
+}
+    
+    
+
+
+
