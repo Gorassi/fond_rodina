@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
+
 .page_news{
     display:flex;
 }
@@ -13,6 +17,22 @@
     width: 20%;
     background-color: #1A4e11;
 }
+.upper_menu{
+    display: none;    
+}
+.hamburger{
+    cursor: pointer;
+    
+}
+
+.upper_donate{
+    text-decoration: none;
+    color:#A2F66F;
+    cursor: pointer;
+}
+/* .upper_donate:hover{
+    color: yellow; 
+} */
 .text_menu{
     /* border: 1px dotted red; */
     margin: 20%;
@@ -99,7 +119,7 @@ a:active{
 .header{
     font-weight: 800;
 }
-.container{
+.container_1,.container_2{
     display: flex;
     justify-content: space-between;
     /* height: 30%; */
@@ -134,4 +154,87 @@ a:active{
 #kasatki{
     max-width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 1165px){
+    .references>a{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .references>a{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 816px){
+    .references>a{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 725px){
+    .page_news{
+        display:flex;
+        flex-direction: column;
+    }
+    .menu{
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 80%;
+        /* background-color: #1A4e11; */
+        background-color: aqua;
+    }
+    .upper_menu{
+        display: flex;
+        flex-direction: row;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;  
+    /* background-color: #1A4e11; */
+    background-color: burlywood;
+    }
+    /* .upper_menu:hover{
+        background-color: yellow;
+    }
+    .upper_menu:focus{
+        background-color: aquamarine;
+        border: 1px solid black;
+        /* height:100px;
+        width: 50%; */
+    
+    .ham:hover {
+        color: white;
+    }
+    .ham:focus {
+        color:red;
+    }
+    .text_menu{
+        display: none;
+    }
+    #button_1, #copy_right{
+        display: none;
+    }
+    .container_1{
+        flex-direction: column;
+    }
+    .container_2{
+        flex-direction: column-reverse;
+    }
+    .menu{
+        width: 70%;
+        animation: appearance 500ms ease;
+        /* transition-duration: 500ms; */
+    }
+}
+@keyframes appearance {
+    0%{
+        left: -70%;
+    }
+    100%{
+        left: 0%;
+    }
 }
