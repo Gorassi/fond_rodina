@@ -17,7 +17,7 @@ a{
     width: 20%;
     background-color: #1A4e11;
 }
-.upper_menu{
+.bottom_menu{
     display: none;    
 }
 .hamburger{
@@ -25,14 +25,7 @@ a{
     
 }
 
-.upper_donate{
-    text-decoration: none;
-    color:#A2F66F;
-    cursor: pointer;
-}
-/* .upper_donate:hover{
-    color: yellow; 
-} */
+
 .text_menu{
     /* border: 1px dotted red; */
     margin: 20%;
@@ -95,9 +88,10 @@ a:active{
 }
 
 .content{
-    height: 1200px;
+    height: auto;
     width: 80%;
     background-color: #A2F66F;
+    padding-bottom: 50px;
 }
 .allnews{
     margin: 3% 5% auto 5%;
@@ -178,39 +172,40 @@ a:active{
     }
     .menu{
         position: sticky;
-        top: 0;
+        top: calc(100vh - 70px);
         left: 0;
         height: 0;
-        width: 80%;
+        width: 100%;
         /* background-color: #1A4e11; */
-        background-color: aqua;
+        background-color: rgb(235, 179, 200);
     }
-    .upper_menu{
+    .bottom_menu{
         display: flex;
         flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     position: sticky;
-    top: 0;
+    top: 0;    
     left: 0;
-    height: auto;
+    height: 70px;
     width: 100%;  
     /* background-color: #1A4e11; */
-    background-color: burlywood;
+    background-color: yellowgreen;
     }
-    /* .upper_menu:hover{
-        background-color: yellow;
+    .box{
+        height: 50px;
+        width: 70px;
+        
+        border: 1px dotted blue;
     }
-    .upper_menu:focus{
+    .box>a{
         background-color: aquamarine;
-        border: 1px solid black;
-        /* height:100px;
-        width: 50%; */
-    
-    .ham:hover {
-        color: white;
     }
-    .ham:focus {
-        color:red;
+    .icon_text{
+        color:black;
+    }
+    .icon_text:hover{
+        background-color: aqua;
     }
     .text_menu{
         display: none;
@@ -224,17 +219,8 @@ a:active{
     .container_2{
         flex-direction: column-reverse;
     }
-    .menu{
-        width: 70%;
-        animation: appearance 500ms ease;
-        /* transition-duration: 500ms; */
+    .content{
+        width: 100%;
     }
 }
-@keyframes appearance {
-    0%{
-        left: -70%;
-    }
-    100%{
-        left: 0%;
-    }
-}
+
