@@ -164,7 +164,7 @@ a:active{
         flex-direction: column;
     }
     .menu{
-        position: sticky;
+        position: fixed;
         top: calc(100vh - 70px);
         left: 0;
         height: 0;
@@ -209,7 +209,8 @@ a:active{
     }
     .content{
         width: 100%;
-        margin-bottom: 40px;        
+        margin-bottom: 40px;
+        background-color: #b8eb98;        
     }
     #news_header{
         font-size:32px;
