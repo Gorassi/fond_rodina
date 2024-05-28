@@ -189,7 +189,7 @@ a:active{
         height: 50px;
         width: 70px;
         /* background-color: pink; */
-        border: 1px dotted blue;
+        /* border: 1px dotted blue; */
     }
     .box:hover{
         background-color: #e5f052;
