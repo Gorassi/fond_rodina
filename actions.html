@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="actions.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="page_news">
@@ -47,7 +48,7 @@
                     </a>
                 </div>     
                 <div class="box">
-                    <a onclick="alert('Вы можете внести свою долю в дело защиты природы перечислив сумму через СБП на телефон +7(916)116-19-18 Евгений Ф. Спасибо Вам!!!')"   class="icon_box"> 
+                    <a onclick="openModalWindow()" class="icon_box"> 
                         <center>
                             <img src="IMG/Icons/icon_ruble_thin.png" alt="icon flash">
                             <br>
@@ -70,7 +71,7 @@
                 </p>
             </div>
             
-            <div id="button_1" onclick="prompt('Введите ваш номер карточки \n и сумму перевода', '16 цифр')">
+            <div id="button_1" onclick="openModalWindow()">
                 <div id="button_text" >
                     <center>
                         <span id="make">Сделать</span> 

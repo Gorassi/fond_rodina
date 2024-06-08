@@ -33,6 +33,7 @@
 
 a:hover{
     color: yellow;
+    cursor: pointer;
 }
 a:active{
     color: white;
@@ -144,6 +145,27 @@ p{
     max-width: 100%;
     height: auto;
 }
+
+.proba{
+    margin-right: 100px;
+}
+.modalWindow{
+    opacity: 0;
+    pointer-events: none;
+    width: 400px;
+    height: 230px;
+    border: 2x solid blue;
+    position: fixed;
+    top: calc(50vh - 115px);
+    left: calc(50vw - 200px);
+    z-index: -1;
+    background-color: rgb(222, 229, 231);
+}
+.modalContainer{
+    margin-right: 5px;
+}
+
+
 @media screen and (max-width: 725px){
     .page_news{
         display:flex;

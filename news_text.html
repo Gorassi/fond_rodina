@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="news_text.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="page_news">
@@ -47,7 +48,7 @@
                     </a>
                 </div>     
                 <div class="box">
-                    <a onclick="alert('Вы можете перевести пожертвование для фонда на телефон +7(916)116-19-18')"   class="icon_box"> 
+                    <a onclick="openModalWindow()"   class="icon_box"> 
                         <center>
                             <img src="IMG/Icons/icon_ruble_thin.png" alt="icon flash">
                             <br>
@@ -73,7 +74,7 @@
                 </p>
             </div>
             
-            <div id="button_1"  onclick="prompt('Введите ваш номер карточки \n ', '16 цифр банковской карты')">
+            <div id="button_1"  onclick="openModalWindow()">
                 <div id="button_text">
                     <center>
                         <span id="make">Сделать</span> 
@@ -189,9 +190,23 @@
                                 </div>                                
                             </div>
                         </div>
+                        <a href="#idModal">Открыть модальное окно</a>
                     </div>                    
                 </div>
         </div>
     </div>
+    
+    <div class="modalWin" id="idModal">
+        <h3>Modal Window Title</h3>
+        <h3 id="close" onclick="closeWindow()">X</h3>
+        <br>
+        <h2>It is modal window with different informations</h2>
+        <br>
+        <img sec="8" alt="my image">
+        <br>
+        <h6>Different info too</h6>
+    </div>
+
+
 </body>
 </html>

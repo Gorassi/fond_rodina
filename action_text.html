@@ -48,7 +48,7 @@
                     </a>
                 </div>     
                 <div class="box">
-                    <a onclick="openModalWindow()"   class="icon_box"> 
+                    <a type="button" onclick="openModalWindow()"   class="icon_box"> 
                         <center>
                             <img src="IMG/Icons/icon_ruble_thin.png" alt="icon flash">
                             <br>
@@ -74,7 +74,7 @@
                 </p>
             </div>
             
-            <div id="button_1"  onclick="prompt('Введите ваш номер карточки \n ', '16 цифр банковской карты')">
+            <div id="button_1" type="button" onclick="openModalWindow()">
                 <div id="button_text">
                     <center>
                         <span id="make">Сделать</span> 
@@ -207,6 +207,20 @@
                     </div>                    
                 </div>
         </div>
+    </div>
+
+    <!-- Unvisible modal window -->
+    <div class="modalWindow" id="myModal">
+        <div class="modalContainer">
+            <p type="button"  align="right" id="closeX" onclick="closeModalWin()"><strong>X</strong></p>
+            <center>
+                <h2>Оказать посильную помощь</h2><br>
+                <p id="mainText">Вы можете перечислить средства в любом размере через СБП на телефон <strong>+7(916)116-19-18</strong>.</p>
+                <p id="mainText">Получатель Евгений Ф.</p><br>
+                <p><strong>Огромное Вам спасибо за ваше участие!</strong></p><br>
+                <h3>Сохраним природу вместе!</h3>
+            </center>
+        </div>        
     </div>
 </body>
 </html>
