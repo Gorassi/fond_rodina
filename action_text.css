@@ -152,7 +152,7 @@ p{
 .modalWindow{
     opacity: 0;
     pointer-events: none;
-    width: 400px;
+    width: 360px;
     height: 230px;
     border: 2x solid blue;
     position: fixed;

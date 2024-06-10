@@ -7,6 +7,7 @@ function openModalWindow(){
     modalWin.style['pointer-events'] = 'auto';
     modalWin.style['z-index'] = '1';
     closeX.style.cursor = 'pointer';
+    modalWin.style.transition = '0.4s';
     // alert('Это модальное окно\n\
     // Вы можете помочь природе перечислив сумму через СБП на тел.+7(916)116-19-18.\
     // \nОгромное Вам спасибо за посильный вклад!\
