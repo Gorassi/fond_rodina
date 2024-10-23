@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <div class="wrapper">
+            <center>
+                <h1>Рабочий стол администратора</h1>
+                <br>
+                <div class="container">
+                    <div class="button" onClick="alert('you has pushed the button!!!')" id="buttonUpdate">Download news</div>
+                    <div class="button" onClick="alert('you has pushed the button!!!')" id="buttonAdd">Add new</div>
+                    <div class="button" onClick="alert('you has pushed the button!!!')" id="buttonModify">Safe news</div>
+                    <div class="button" onClick="alert('you has pushed the button!!!')" id="buttonDelete">Delete new</div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </center>
+            <form id="dynamicForm"></form>
+        
+        <div id="app" class="done">
+            <form @submit.prevent="addNew">
+                <p>Enter title</p>
+                <input v-model="inputOne" required placeholder="New title"></input>
+                <p>{{inputOne}}</p>
+                <p>Enter image URL</p>
+                <input v-model="inputImg" required placeholder="Image"></input>
+                <p>{{inputImg}}</p>
+                <p>Enter text</p>
+                <input v-model="inputText" required placeholder="New text"></input>
+                <p>{{inputText}}</p>
+                <br>
+                <button>Add this new</button>
+            </form>
+            
+            <br>                
+            <br>
+            <ul>
+                <li v-for="myNew in news">
+                    <p>{{myNew}}</p>                     
+                </li>
+            </ul>
+            <br>
+            <form @submit.prevent="sendNew">
+                <p>Enter new: </p>
+                <input v-model="newText" required placeholder="Enter new here"></input>
+                <p>{{newText}}</p>
+                <button>Add this newText</button>
+            </form>
+            <br>
+            <!-- <p>Child Component : </p>
+            <ChildComp /> -->
+            <br>
+            <ul>    
+                <li v-for="myItem in items">
+                    <!-- <p>{{myNew.id}} {{myNew.text}}</p> -->
+                    <p>{{myItem}}</p>
+                </li>
+            </ul>
+            <br>
+            <br>
+            {{ message }} <br>
+            
+            <button @click="changeStyle">CHANGE Style</button>
+            <p v-if="myColor" class="textBlue">my color text: Blue text</p>
+            <p v-else class="textRed">my color text: Red text</p>
+            <p :class="{notDone}">{{currentTime}}</p>
+            <br>
+        </div>      
+    </div> 
+    <script>
+        const { createApp } = Vue
+        
+      
+        createApp({
+            
+
+          data() {
+            return {
+              id: 3,
+              message: 'Привет Vue from Evgeny Fonarev!',
+              notDone: true,
+              show: false,
+              inputOne: '',
+              myColor: false,
+              newText: '',
+              news: ['Yanki go home', 'Pindos go home !!', 'Everyone go home'],
+              items: [
+                {id: 1, title: 'title 1', url: 'url 1', text: 'text 1'},
+                {id: 2, title: 'title 2', url: 'url 2', text: 'text 1'},
+                {id: 3, title: 'title 3', url: 'url 3', text: 'text 1'},
+                
+              ]
+            }
+          },
+          computed: {
+              currentTime(){
+                  return '456'
+              }
+          },
+          methods: {
+              changeStyle(){
+                  this.notDone = !this.notDone
+                  this.show = !this.show
+                  this.myColor = !this.myColor
+              },
+              addNew(){
+                // this.news.push(this.inputOne)
+                // this.inputOne =''
+                
+                this.items.push({id: this.id, title: this.inputOne, url: this.inputUrl, text: this.inputText})
+                this.id++
+                this.inputOne = ''
+                this.inputUrl = ''
+                this.inputText = ''
+                // alert(this.id++ + " " + this.inputOne)
+              },
+              sendNew(){
+                this.news.push(this.newText)
+                this.newText=''
+              }
+          }
+        //   components: {
+        //     ChildComp
+        //   }
+        }).mount('#app')
+      </script>
+</body>
+</html>

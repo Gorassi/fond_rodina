@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    background-color: rgb(182, 247, 209);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h1{
+    color: blue;
+    text-shadow: 1px 1px 1px gray;
+}
+
+.button{
+    border: 1px solid blue;
+    background-color: rgb(194, 196, 248);
+    /* padding: 10px; */
+    border-radius: 20px;
+    width: calc(1/4*100% - 50px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 7px black; 
+    font-style: bold;   
+}
+
+.button:hover{
+    background-color: rgb(185, 241, 185);
+    cursor: pointer;
+}
+
+.button:active {
+    color: green;
+    background-color: rgb(152, 233, 152);
+    transform: scale(0.98);
+    box-shadow: 5px 5px 7px white;
+    
+}
+#dynamicForm{
+    display: flex;
+    flex-direction: column;
+}
+.textRed{
+    color: red
+}
+.textBlue{
+    color: blue;
+}

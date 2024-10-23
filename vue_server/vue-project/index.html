@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Vite App</title>
+  </head>
+  <body>
+    <h5>My Vue app!</h5>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="/src/main.js"></script>
+
+    <div id="app">
+      <div class="product">
+        <div class="product-image">
+            <img v-bind:src="image" v-bind:alt="altText" style="width: 200px"/>
+        </div>
+
+          <div class="product-info">
+            <h1>{{title}}</h1> 
+            <h3 v-if="inStock">In Stock</h3>           
+            <h3 v-else>Out of Stock</h3> 
+            <p>Shipping: {{shipping}}</p>
+
+            <ul>
+              <li v-for="detail in details">
+                {{detail}}
+              </li>  
+            </ul> 
+            
+            <h4>Color:</h4> 
+            <div v-for="(variant,index) in variants" :key="variant.variantId" :style="{backgroundColor: variant.variantColor}">
+                <p @mouseover="updateProduct(variant.variantImage, index)">{{variant.variantColor + ' : ' +  variant.variantImage}}</p>
+            </div>
+            <p> Message: {{message}}</p>
+            <!-- <myChild /> -->
+
+              <!-- <div class='color-box' v-for="(variant, index) in variants" 
+              :key="variant.variantId" 
+              :style="{backgroundColor: variant.variantColor}"
+              @mouseover='updateProduct(index)'>
+                <div style="max-width: 30px">
+                  <p @mouseover='updateProduct(index)'>{{variant.variantColor}} </p>       
+                </div>                                               
+              </div> -->
+
+          <button 
+            @click="cart++" 
+            :disable="!inStock" 
+            :class="{disableButton: !inStock}">
+            Increase count</button>
+          <div> Count = {{cart}}</div>
+      </div>
+      <br>
+      <br>
+      {{message}}
+      <p>{{name}}</p>
+      <p v-text="name"></p>
+      <h2>Child Component : </h2>
+      <div id="myApp">
+        <ChildComp />
+      </div>
+      <p>{{product}}</p>
+      
+     
+    </h6>
+    
+     <!-- <script>
+        const { createApp } = Vue
+        
+        createApp({
+          data(){
+            return {              
+              product: 'Socks',
+              image: './src/assets/socks_black.webp',
+              altText: 'A pair of socks',
+              selectedVariant: 0,
+              inStock: true,
+              details: ['80% cooton', '20% polyester', 'Gender-neutral'],
+              variants: [
+                {
+                  variantId: 2234,
+                  variantColor: 'green',
+                  variantImage: './src/assets/socks_green.jpg',
+                  variantQuantity: 10,
+                },
+                {
+                  variantId: 2235,
+                  variantColor: 'red',
+                  variantImage: './src/assets/socks_red.jpg',
+                  variantQuantity: 0,
+                }
+              ],
+              cart: 0,
+              shipping: "What is shipping??? Say me, please...",
+              
+
+              message: "Hello, from Vue App !",
+              name: 'Pregimagitator, I am ...',
+            }
+          },
+          
+          methods: {
+            updateProduct(index) {
+            this.selectedVariant = index;
+            console.log(index);
+          }
+          },
+          computed:{
+            image(){
+              return this.variants[this.selectedVariant.variantImage]
+            },
+            inStock(){
+              return this.variants[this.selectedVariant].variantQuantity;
+            }
+          },
+          
+        }).mount('#app')
+      </script> -->
+      <script>
+        import ChildComp from 'ChildComp.vue'
+
+        export default{
+          components: {
+            ChildComp
+          }
+        }
+      </script>
+  </body>
+</html>

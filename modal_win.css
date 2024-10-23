@@ -2,7 +2,7 @@
     opacity: 0;
     pointer-events: none;
     width: 360px;
-    height: 230px;
+    height: 300px;
     border: 2x solid blue;
     position: fixed;
     top: calc(50vh - 115px);
@@ -10,6 +10,10 @@
     z-index: -1;
     background-color: rgb(222, 229, 231);
 }
+/* .shtrih_code{
+    width: 150px;
+    height: 150px;
+} */
 .modalContainer{
     margin-right: 5px;
 }

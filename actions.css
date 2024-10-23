@@ -45,12 +45,12 @@ a:active{
 #button_1{
     width: 70%;
     height: 10%;
-    border: 3px solid #A2F66F;
+    border: 3px solid orange;
     border-radius: 20px;
     padding: auto;
     margin-left: auto;
     margin-right: auto;
-    background-color: #A2F66F;
+    background-color: #e5f052;
     /* color: #1A4e11; */
     color: black;
     font-size: 20px;
@@ -61,7 +61,7 @@ a:active{
    
 }
 #button_1:hover{
-    background-color: #e5f052;
+    background-color: white;
     /* text-shadow: 10px 10px 5px red; */
     
 }
