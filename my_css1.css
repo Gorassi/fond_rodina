@@ -44,9 +44,10 @@ a{
     
     color: #C8E9EE;    
     text-shadow: blue 4px 4px 8px;
+    opacity: 0.6;
     text-align: center;
     /* background-color: #A2F66F; */
-    opacity: 0.6;
+    
 }
 h2{
     color: rgb(227, 238, 75);    
@@ -174,20 +175,29 @@ transform: scale(1, 0.3);
         font-size: 75px;
     }
     .rodina{
-        color:red;
+        /* color:red; */
+        color: #C8E9EE;    
+        text-shadow: blue 4px 4px 8px;
+        opacity: 0.6;
         font-size: 45px;
     }
     }
 @media only screen and (max-width: 816px) {
     .rodina{
-        color: blue;
+        /* color: blue; */
+        color: #C8E9EE;    
+        text-shadow: blue 4px 4px 8px;
+        opacity: 0.6;
         font-size: 40px;
         text-align: center;
     }   
 }
 @media only screen and (max-width: 612px){
     .rodina{
-        color: yellow;
+        /* color: yellow; */
+        color: #C8E9EE;    
+        text-shadow: blue 4px 4px 8px;
+        opacity: 0.6;
         font-size: 30px;
         text-align: center;
     }

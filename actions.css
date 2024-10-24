@@ -174,20 +174,24 @@ a:active{
         flex-direction: column;
     }
     .menu{
+        /* border: 1px dotted palevioletred; */
         position: fixed;
         top: calc(100vh - 70px);
+        /* bottom: 0; */
         left: 0;
-        height: 0;
+        /* height: 0; */
         width: 100%;
-        /* background-color: #1A4e11; */
-        background-color: rgb(235, 179, 200);
+        right: 0;
+        /* background-color: #1A4e11;
+        background-color: rgb(235, 179, 200); */
     }
     .bottom_menu{
         display: flex;
         flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
+    position: absolute;
     top: 0;    
     left: 0;
     height: 70px;
