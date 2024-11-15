@@ -102,6 +102,9 @@ transform: scale(1, 0.3);
     box-shadow: 7px 7px 10px black; 
     animation-name: enter_from_right;
     animation-duration: 2s;
+    /* animation-iteration-count: 1; */
+    /* animation-name: enter_from_right, increase_border;
+    animation-duration: 2s, infinite; */
 }
 
 .z-image{
@@ -111,22 +114,30 @@ transform: scale(1, 0.3);
 }
 .action-text{
     width: 200px;
-    heighT: 100px;
+    height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 .title-01{
     font-size: 30px;
     font-weight: 900;
     color: red;
     /* background-color: aquamarine; */
+    justify-content: center;
 }
 .text-01{
     font-size: 17px;
     color: rgb(15, 85, 21);
     font-weight: 900;
     /* background-color: aquamarine; */
+    justify-content: center;
+}
+.z_container_mobile{
+    display: none;
+    animation-name: increase_width;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
 @keyframes my_animation {
     from{
@@ -165,8 +176,40 @@ transform: scale(1, 0.3);
         width: 300px;
         height: 100px;
         background-color:rgb(240, 240, 152);
+        border: 8px solid rgb(204, 24, 24);
+    }
+}
+@keyframes increase_width {
+    from{
+        width: 270px;
         border:8px solid rgb(204, 24, 24);
     }
+    60%{
+        width: 270px;
+        border:8px solid rgb(204, 24, 24);
+    }
+    85%{
+        width: 280px;
+        border:10px solid rgb(204, 24, 24);
+    }
+    100%{
+        width: 270px;
+        border:8px solid rgb(204, 24, 24);
+    }
+}
+@keyframes increase_border {
+    from{
+        border:4px solid rgb(204, 24, 24);
+    }
+    70%{
+        border:4px solid rgb(204, 24, 24);
+    }
+    85%{
+        border:10px solid rgb(204, 24, 24);
+    }
+    95%{
+        border:4px solid rgb(204, 24, 24);
+    }    
 }
 
 
@@ -176,7 +219,7 @@ transform: scale(1, 0.3);
     }
     .rodina{
         /* color:red; */
-        color: #C8E9EE;    
+        /* color: #C8E9EE;     */
         text-shadow: blue 4px 4px 8px;
         opacity: 0.6;
         font-size: 45px;
@@ -185,17 +228,20 @@ transform: scale(1, 0.3);
 @media only screen and (max-width: 816px) {
     .rodina{
         /* color: blue; */
-        color: #C8E9EE;    
+        /* color: #C8E9EE;     */
         text-shadow: blue 4px 4px 8px;
         opacity: 0.6;
         font-size: 40px;
         text-align: center;
-    }   
+    }  
+    /* .z_container{
+        bottom: 220px;
+    }  */
 }
 @media only screen and (max-width: 612px){
     .rodina{
         /* color: yellow; */
-        color: #C8E9EE;    
+        /* color: #C8E9EE;     */
         text-shadow: blue 4px 4px 8px;
         opacity: 0.6;
         font-size: 30px;
@@ -205,7 +251,38 @@ transform: scale(1, 0.3);
         font-size: 45px;
         text-align: center;
     }
-
+    .enter{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        /* background-color: lightseagreen; */
+        opacity: 0.9;
+    }
+    .v_symbol{
+        background-color: lightcoral;
+        justify-content: flex-start;
+    }
+    .z_container{
+        display: none;
+    }
+    .z_container_mobile{
+        background-color: aquamarine;
+        justify-content: flex-end;
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        width: 270px;
+            height: 100px;
+            background-color:rgb(240, 240, 152);
+            border:8px solid rgb(204, 24, 24);
+        border-radius: 30px;
+        position:relative;
+        /* right: 120px; */
+        bottom: auto;   
+        box-shadow: 7px 7px 10px black; 
+        /* animation: none; */
+        /* animation-duration: 2s; */
+    }
 }
     
     
